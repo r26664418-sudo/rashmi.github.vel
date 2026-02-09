@@ -103,7 +103,7 @@
     
     <div class="day" id="chocolate-day">
         <h2>Chocolate Day - February 9</h2>
-        <p>Sweeten the deal with chocolates. Dark, milk, or white – choose your favorite!</p>
+        <p>Sweeten the deal with chocolates. Dark, milk, or white â€“ choose your favorite!</p>
         <button onclick="openModal('chocolate-modal')">Learn More</button>
     </div>
     
@@ -127,7 +127,7 @@
     
     <div class="day" id="kiss-day">
         <h2>Kiss Day - February 13</h2>
-        <p>Seal your love with kisses – sweet and romantic!</p>
+        <p>Seal your love with kisses â€“ sweet and romantic!</p>
         <button onclick="openModal('kiss-modal')">Learn More</button>
     </div>
     
@@ -187,7 +187,7 @@
         <div class="modal-content">
             <span class="close" onclick="closeModal('hug-modal')">&times;</span>
             <h3>Hug Day Warmth</h3>
-            <p>Hugs reduce stress and increase oxytocin – the love hormone!</p>
+            <p>Hugs reduce stress and increase oxytocin â€“ the love hormone!</p>
             <p>Challenge: Give 10 hugs today.</p>
         </div>
     </div>
@@ -206,7 +206,7 @@
             <span class="close" onclick="closeModal('valentine-modal')">&times;</span>
             <h3>Valentine's Day Celebration</h3>
             <p>Go all out! Dinner, dancing, or a cozy night in.</p>
-            <p>Quote: "Love is not just looking at each other, it's looking in the same direction." – Antoine de Saint-Exupéry</p>
+            <p>Quote: "Love is not just looking at each other, it's looking in the same direction." â€“ Antoine de Saint-ExupÃ©ry</p>
         </div>
     </div>
     
@@ -249,4 +249,5 @@
         }
     </script>
 </body>
+
 </html>
