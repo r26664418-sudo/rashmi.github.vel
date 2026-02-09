@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Week Special</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fecfef);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background: #e91e63;
+            color: white;
+            padding: 20px;
+            font-size: 2em;
+        }
+        .day {
+            margin: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .day:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }
+        button {
+            background: #e91e63;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background: #c2185b;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 500px;
+            text-align: center;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .valentine-question {
+            margin: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+        }
+        footer {
+            background: #e91e63;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>Happy Valentine's Week! ??</header>
+    
+    <div class="day" id="rose-day">
+        <h2>Rose Day - February 7</h2>
+        <p>Express your love with roses. Red for passion, pink for sweetness!</p>
+        <button onclick="openModal('rose-modal')">Learn More</button>
+    </div>
+    
+    <div class="day" id="propose-day">
+        <h2>Propose Day - February 8</h2>
+        <p>Pop the question! Share your feelings and make a commitment.</p>
+        <button onclick="openModal('propose-modal')">Learn More</button>
+    </div>
+    
+    <div class="day" id="chocolate-day">
+        <h2>Chocolate Day - February 9</h2>
+        <p>Sweeten the deal with chocolates. Dark, milk, or white – choose your favorite!</p>
+        <button onclick="openModal('chocolate-modal')">Learn More</button>
+    </div>
+    
+    <div class="day" id="teddy-day">
+        <h2>Teddy Day - February 10</h2>
+        <p>Gift a cuddly teddy bear to show your affection and warmth.</p>
+        <button onclick="openModal('teddy-modal')">Learn More</button>
+    </div>
+    
+    <div class="day" id="promise-day">
+        <h2>Promise Day - February 11</h2>
+        <p>Make heartfelt promises to strengthen your bond.</p>
+        <button onclick="openModal('promise-modal')">Learn More</button>
+    </div>
+    
+    <div class="day" id="hug-day">
+        <h2>Hug Day - February 12</h2>
+        <p>Share warm hugs to feel closer and loved.</p>
+        <button onclick="openModal('hug-modal')">Learn More</button>
+    </div>
+    
+    <div class="day" id="kiss-day">
+        <h2>Kiss Day - February 13</h2>
+        <p>Seal your love with kisses – sweet and romantic!</p>
+        <button onclick="openModal('kiss-modal')">Learn More</button>
+    </div>
+    
+    <div class="day" id="valentine-day">
+        <h2>Valentine's Day - February 14</h2>
+        <p>The grand finale: Celebrate love with dates, gifts, and special moments.</p>
+        <button onclick="openModal('valentine-modal')">Learn More</button>
+    </div>
+    
+    <!-- Modals for each day -->
+    <div id="rose-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('rose-modal')">&times;</span>
+            <h3>Rose Day Fun Fact</h3>
+            <p>Roses have been symbols of love for centuries. Did you know there are over 150 species of roses?</p>
+            <p>Tip: Pair red roses with a handwritten note for extra romance!</p>
+        </div>
+    </div>
+    
+    <div id="propose-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('propose-modal')">&times;</span>
+            <h3>Propose Day Tip</h3>
+            <p>Make it memorable! Plan a surprise at your favorite spot.</p>
+            <p>Quote: "Will you be my forever?"</p>
+        </div>
+    </div>
+    
+    <div id="chocolate-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('chocolate-modal')">&times;</span>
+            <h3>Chocolate Day Delight</h3>
+            <p>Chocolate releases endorphins, making it the perfect love booster!</p>
+            <p>Try: Homemade chocolate truffles for a personal touch.</p>
+        </div>
+    </div>
+    
+    <div id="teddy-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('teddy-modal')">&times;</span>
+            <h3>Teddy Day Cuddle</h3>
+            <p>Teddy bears originated from a political cartoon in 1902!</p>
+            <p>Idea: Attach a note saying "You're my teddy bear."</p>
+        </div>
+    </div>
+    
+    <div id="promise-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('promise-modal')">&times;</span>
+            <h3>Promise Day Vow</h3>
+            <p>Promises build trust. Keep them simple and sincere.</p>
+            <p>Example: "I promise to always support you."</p>
+        </div>
+    </div>
+    
+    <div id="hug-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('hug-modal')">&times;</span>
+            <h3>Hug Day Warmth</h3>
+            <p>Hugs reduce stress and increase oxytocin – the love hormone!</p>
+            <p>Challenge: Give 10 hugs today.</p>
+        </div>
+    </div>
+    
+    <div id="kiss-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('kiss-modal')">&times;</span>
+            <h3>Kiss Day Spark</h3>
+            <p>A kiss can say more than words. Make it gentle and meaningful.</p>
+            <p>Fact: The longest kiss lasted 58 hours!</p>
+        </div>
+    </div>
+    
+    <div id="valentine-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('valentine-modal')">&times;</span>
+            <h3>Valentine's Day Celebration</h3>
+            <p>Go all out! Dinner, dancing, or a cozy night in.</p>
+            <p>Quote: "Love is not just looking at each other, it's looking in the same direction." – Antoine de Saint-Exupéry</p>
+        </div>
+    </div>
+    
+    <!-- Valentine's Day Special Question -->
+    <div class="valentine-question">
+        <h2>Will you be my Valentine? ??</h2>
+        <button onclick="valentineResponse('yes')">Yes</button>
+        <button onclick="valentineResponse('no')">No</button>
+        <p id="response" style="display:none; font-size:1.2em; margin-top:10px;"></p>
+    </div>
+    
+    <footer>Spread love this Valentine's Week! ??</footer>
+    
+    <script>
+        // Modal functions
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "flex";
+        }
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+        
+        // Valentine's Day response function
+        function valentineResponse(answer) {
+            const responseEl = document.getElementById("response");
+            if (answer === "yes") {
+                responseEl.innerText = "Yay! Happy Valentine's Day! ??";
+                responseEl.style.color = "green";
+                responseEl.style.display = "block";
+            } else {
+                responseEl.innerText = "Please don't...";
+                responseEl.style.color = "red";
+                responseEl.style.display = "block";
+                // Repeat the question after 2 seconds
+                setTimeout(() => {
+                    responseEl.style.display = "none";
+                    // Optionally, you could add a loop or alert, but this resets it
+                }, 2000);
+            }
+        }
+    </script>
+</body>
+</html>
